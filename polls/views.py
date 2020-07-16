@@ -13,7 +13,6 @@ def index(request):
 
 
 def detail(request, question_id):
-    """存在问题 Question 没有object属性"""
     try:
         question = Question.objects.get(pk=question_id)
     except Question.DoesNotExist:
